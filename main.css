@@ -1,5 +1,5 @@
 html {
-  font-size: calc(18px + (22 - 18) * (100vw - 400px) / (800 - 400));
+  font-size: calc(14px + (18 - 14) * (100vw - 400px) / (800 - 400));
   /*  font-size: calc(min font size + (max font size - min font size) * (100vw - min screen size) / (max screen size - min screen size));  */
 }
 body {
@@ -47,7 +47,7 @@ aside button:hover {
   margin: 1vh;
 }
 p {
-  padding: 1vh 5vw;
+  padding: 1vh 15vw;
 }
 
 #trademarks {
@@ -109,5 +109,8 @@ p {
   }
   .advert__image {
     max-width: 90vw;
+  }
+  p {
+    padding: 1vh 5vw;
   }
 }
