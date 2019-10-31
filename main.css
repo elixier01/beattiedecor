@@ -25,8 +25,8 @@ aside button {
   border-radius: 15%;
 }
 aside button:hover {
-  color: #353839;
-  background-color: white;
+  color: #216e88;
+  background-color: silver;
 }
 #main__title {
   margin: 0;
