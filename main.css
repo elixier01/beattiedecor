@@ -1,0 +1,113 @@
+html {
+  font-size: calc(18px + (22 - 18) * (100vw - 400px) / (800 - 400));
+  /*  font-size: calc(min font size + (max font size - min font size) * (100vw - min screen size) / (max screen size - min screen size));  */
+}
+body {
+  color: rgb(70, 69, 69);
+  background-color: rgb(219, 219, 219);
+  margin: 0;
+}
+
+header {
+  background-image: url("Beattie Decorating Services.png");
+  height: 100vh;
+  background-position: center center;
+  background-size: cover;
+}
+
+aside button {
+  display: block;
+  margin: 1vh auto;
+  justify-content: center;
+  color: white;
+  background-color: #353839;
+  height: 50px;
+  border-radius: 15%;
+}
+aside button:hover {
+  color: #353839;
+  background-color: white;
+}
+#main__title {
+  margin: 0;
+  padding-top: 2vh;
+}
+.centered {
+  text-align: center;
+}
+
+.advert__image {
+  max-width: 50vw;
+  max-height: 50vh;
+}
+
+.advert__header {
+  color: white;
+  background-color: #353839;
+  margin: 1vh;
+}
+p {
+  padding: 1vh 5vw;
+}
+
+#trademarks {
+  display: flex;
+  justify-content: space-around;
+  background-color: rgb(173, 173, 173);
+}
+
+#trademarks img {
+  margin: 1em;
+  height: 3em;
+  width: 4em;
+  border-radius: 10%;
+}
+
+#offer__section {
+  background-color: rgb(27, 27, 27);
+  padding: 10px;
+}
+
+.offer__box {
+  margin: 0.5em 0.5em;
+  border: 3px solid rgb(185, 185, 185);
+  overflow: auto;
+  background-color: rgb(48, 48, 48);
+}
+
+.offer__box h3,
+.offer__box p {
+  color: rgb(190, 190, 190);
+  float: right;
+  padding-right: 0.5em;
+}
+
+.offer__box img {
+  float: left;
+  padding: 1em 0 0 1em;
+}
+
+#why__us li {
+  list-style: none;
+}
+
+#why__us li::before {
+  content: "\2022"; /* \2022 is the CSS Code/unicode for a bullet */
+  color: rgb(0, 0, 0);
+  display: inline-block;
+  width: 1em;
+}
+
+#reviews {
+  background-color: rgb(70, 69, 69);
+  color: rgb(219, 219, 219);
+}
+@media only screen and (max-width: 850px) {
+  header {
+    background-image: url("Beattie\ Decorating\ Services\ Small.PNG");
+    height: 75vw;
+  }
+  .advert__image {
+    max-width: 90vw;
+  }
+}
