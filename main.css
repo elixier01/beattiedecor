@@ -1,32 +1,46 @@
 html {
-  font-size: calc(14px + (18 - 14) * (100vw - 400px) / (800 - 400));
+  font-size: calc(16px + (20 - 16) * (100vw - 400px) / (800 - 400));
   /*  font-size: calc(min font size + (max font size - min font size) * (100vw - min screen size) / (max screen size - min screen size));  */
 }
 body {
   color: rgb(70, 69, 69);
-  background-color: rgb(219, 219, 219);
+  background-image: linear-gradient(
+    to right,
+    rgb(219, 219, 219),
+    rgb(131, 128, 128)
+  );
   margin: 0;
 }
-
+#main__header {
+  text-align: center;
+}
+a {
+  color: darkred;
+}
+a:hover {
+  color: orangered;
+}
 header {
   background-image: url("Beattie Decorating Services.png");
   height: 100vh;
-  background-position: center center;
+  background-position: center;
   background-size: cover;
 }
 
 aside button {
   display: block;
-  margin: 1vh auto;
+  margin: 0.5vh auto;
   justify-content: center;
   color: white;
   background-color: #353839;
+  width: 200px;
   height: 50px;
   border-radius: 15%;
 }
 aside button:hover {
   color: #216e88;
   background-color: silver;
+  transform: rotate(2.5deg);
 }
 #main__title {
   margin: 0;
@@ -37,13 +51,12 @@ aside button:hover {
 }
 
 .advert__image {
-  max-width: 50vw;
   max-height: 50vh;
 }
 
 .advert__header {
   color: white;
-  background-color: #353839;
+  background-image: linear-gradient(to right, #353839, black);
   margin: 1vh;
 }
 p {
@@ -64,27 +77,27 @@ p {
 }
 
 #offer__section {
-  background-color: rgb(27, 27, 27);
+  background-image: linear-gradient(
+    to right,
+    rgb(139, 155, 167),
+    rgb(121, 88, 88)
+  );
   padding: 10px;
+  display: grid;
 }
 
 .offer__box {
   margin: 0.5em 0.5em;
-  border: 3px solid rgb(185, 185, 185);
-  overflow: auto;
-  background-color: rgb(48, 48, 48);
+  border: 2px solid rgb(185, 185, 185);
+  grid-template-rows: 33%;
+  color: silver;
+  border-radius: 10%;
 }
 
 .offer__box h3,
 .offer__box p {
-  color: rgb(190, 190, 190);
-  float: right;
-  padding-right: 0.5em;
-}
-
-.offer__box img {
-  float: left;
-  padding: 1em 0 0 1em;
+  width: 80%;
+  padding: 10%;
 }
 
 #why__us li {
@@ -102,7 +115,64 @@ p {
   background-color: rgb(70, 69, 69);
   color: rgb(219, 219, 219);
 }
-@media only screen and (max-width: 850px) {
+
+.newspaper {
+  column-count: 2;
+  column-gap: 5vw;
+  text-align: left;
+}
+
+#cta {
+  text-align: center;
+  background-color: rgb(148, 58, 58);
+  color: lightgray;
+}
+
+ul li {
+  text-align: left;
+  padding: 0 28vw;
+}
+.testimonial {
+  padding: 7vw;
+  margin: 0;
+}
+
+#item1 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  background-color: rgb(126, 64, 64);
+}
+#item2 {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  background-color: rgb(83, 114, 83);
+}
+#item3 {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  background-color: rgb(110, 142, 167);
+}
+#free__quotation {
+  width: 35%;
+  height: 15vh;
+  background-color: rgb(87, 124, 87);
+  margin: 1vw auto;
+  display: block;
+}
+ul li {
+  list-style-type: none;
+}
+@media only screen and (max-width: 700px) {
+  body {
+    background-image: linear-gradient(
+      rgb(165, 161, 161) to right,
+      rgb(219, 219, 219),
+      rgb(192, 188, 188)
+    );
+  }
+  .newspaper {
+    column-count: 1;
+  }
   header {
     background-image: url("Beattie\ Decorating\ Services\ Small.PNG");
     height: 75vw;
@@ -112,5 +182,11 @@ p {
   }
   p {
     padding: 1vh 5vw;
+  }
+  #offer__section {
+    display: block;
+  }
+  ul li {
+    padding: 1vw;
   }
 }
